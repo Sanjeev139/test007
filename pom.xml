@@ -5,7 +5,7 @@
 
 	<groupId>com.github.sanjeev139</groupId>
 	<artifactId>test007</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>Aritmetic Test Library</name>
@@ -37,27 +37,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			
-			 <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>3.1.1</version>
-                <executions>
-                    <execution>
-                        <id>attach-javadocs</id>
-                        <goals>
-                            <goal>jar</goal>
-                        </goals>
-                        <configuration>                          
-                            <source>1.8</source>                                
-                            <doclint>none</doclint>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-
-
-			<!--<plugin>
+			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-javadoc-plugin</artifactId>
 				<version>3.1.1</version>
@@ -69,35 +49,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>-->
-			
-			<!--<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<version>3.1.0</version>
-				<configuration>
-					<sourcepath>${project.basedir}/src/main</sourcepath>
-					<aggregate>false</aggregate>
-					<additionalparam>${javadoc.opts}</additionalparam>
-					<additionalOptions>
-						<additionalOption>-Xdoclint:none</additionalOption>
-					</additionalOptions>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>javadoc</goal>
-						</goals>
-						<phase>process-resources</phase>
-					</execution>
-					<execution>
-						<id>attach-javadocs</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>-->
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-gpg-plugin</artifactId>
@@ -112,7 +64,7 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!--<plugin>
+			<plugin>
 				<groupId>org.sonatype.plugins</groupId>
 				<artifactId>nexus-staging-maven-plugin</artifactId>
 				<version>1.6.7</version>
@@ -122,10 +74,9 @@
 					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
-			</plugin>-->
+			</plugin>
 		</plugins>
 	</build>
-
 	<licenses>
 
 		<license>
